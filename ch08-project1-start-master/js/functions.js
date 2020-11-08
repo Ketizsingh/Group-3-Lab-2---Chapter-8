@@ -21,3 +21,8 @@ function shippingCalculate(substotal) // calculating shipping cost using if/else
 	}
 	return shipping;
 }
+
+function taxCalculate(substotal) // calculating tax cost using arthimatic operations
+{
+	return ((10 / 100) * substotal).toFixed(2);
+}
