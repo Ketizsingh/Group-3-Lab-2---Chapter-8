@@ -6,4 +6,13 @@ function outputCountryBox(name, continent, cities, photos) {
 			citieshtml += '<li>' + cityarray[index] + '</li>';
 		}
 		return citieshtml;
+
+		function outputPhotos(photosarray) {
+			var photoshtml = '';
+			for (let index = 0; index < photosarray.length; index++) {
+
+				photoshtml += '<img src="images/' + photosarray[index] + '" class="photo">';
+			}
+			return photoshtml;
+		}
 	}
