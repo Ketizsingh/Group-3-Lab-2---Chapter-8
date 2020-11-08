@@ -1,6 +1,8 @@
 /* add in your functions here */
 function outputCountryBox(name, continent, cities, photos) {
-	function outputCities(cityarray) {
+    
+    
+    function outputCities(cityarray) {
 		var citieshtml = '';
 		for (let index = 0; index < cityarray.length; index++) {
 			citieshtml += '<li>' + cityarray[index] + '</li>';
@@ -14,7 +16,11 @@ function outputCountryBox(name, continent, cities, photos) {
 				photoshtml += '<img src="images/' + photosarray[index] + '" class="photo">';
 			}
 			return photoshtml;
-		}
+        }
+        
+        document.write('<div class="item"><h2>' + name + '</h2><p>' + continent + '</p><div class="inner-box"><h3>Cities</h3><ul>' + outputCities(cities) + '</ul></div><div class="inner-box"><h3>Popular Photos</h3>' + outputPhotos(photos) + '</div><button>Visit</button></div>');
+
+        
 	}
 
 for (let index = 0; index < countries.length; index++) {
