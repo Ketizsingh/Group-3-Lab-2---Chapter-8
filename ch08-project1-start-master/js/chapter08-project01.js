@@ -2,6 +2,7 @@
    going to concern ourselves with minimizing globals, etc */
 
    let substotal = 0;
+   
    for (let index = 0; index < filenames.length; index++) {
 
       const file = filenames[index];
@@ -16,3 +17,7 @@
 
       
    }
+
+var shipping = shippingCalculate(substotal);
+var tax = taxCalculate(substotal);
+var grandTotal = totalCalculate(substotal, shipping, tax);
