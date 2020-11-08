@@ -16,3 +16,14 @@ function outputCountryBox(name, continent, cities, photos) {
 			return photoshtml;
 		}
 	}
+
+
+	for (let index = 0; index < countries.length; index++) {
+	const name = countries[index].name;
+	const continent = countries[index].continent;
+	const cities = countries[index].cities;
+	const photos = countries[index].photos;
+
+	outputCountryBox(name, continent, cities, photos);
+
+}
