@@ -8,7 +8,7 @@ function outputCartRow(file, title, quantity, price, total) {
 	return '<tr><td><img src="images/' + file + '"></td><td>' + title + '</td><td>' + quantity + '</td><td>$' + price + '</td><td>$' + total + '</td></tr>';
 }
 
-        
+
 function totalCalculate(substotal, shipping, tax) {
 	return Number(substotal) + Number(shipping) + Number(tax);
 }
@@ -26,4 +26,11 @@ function shippingCalculate(substotal) // calculating shipping cost using if/else
 function taxCalculate(substotal) // calculating tax cost using arthimatic operations
 {
 	return ((10 / 100) * substotal).toFixed(2);
+}
+
+var display = {
+	subtotal: substotal.toFixed(2),
+	tax: tax,
+	shipping: shipping,
+	grandTotal: grandTotal.toFixed(2)
 }
