@@ -6,7 +6,7 @@ function outputCountryBox(name, continent, cities, photos) {
 			citieshtml += '<li>' + cityarray[index] + '</li>';
 		}
 		return citieshtml;
-
+        }
 		function outputPhotos(photosarray) {
 			var photoshtml = '';
 			for (let index = 0; index < photosarray.length; index++) {
@@ -17,8 +17,7 @@ function outputCountryBox(name, continent, cities, photos) {
 		}
 	}
 
-
-	for (let index = 0; index < countries.length; index++) {
+for (let index = 0; index < countries.length; index++) {
 	const name = countries[index].name;
 	const continent = countries[index].continent;
 	const cities = countries[index].cities;
@@ -27,3 +26,4 @@ function outputCountryBox(name, continent, cities, photos) {
 	outputCountryBox(name, continent, cities, photos);
 
 }
+	
