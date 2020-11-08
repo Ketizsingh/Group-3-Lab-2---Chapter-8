@@ -28,3 +28,11 @@ var display = {
    shipping: shipping,
    grandTotal: grandTotal.toFixed(2)
 }
+
+
+function fillvalues() {
+	document.getElementsByClassName('subtotal')[0].innerHTML = '$' + display.subtotal;
+	document.getElementsByClassName('tax')[0].innerHTML = '$' + display.tax;
+	document.getElementsByClassName('shipping')[0].innerHTML = '$' + display.shipping;
+	document.getElementsByClassName('grandtotal')[0].innerHTML = '$' + display.grandTotal;
+}
