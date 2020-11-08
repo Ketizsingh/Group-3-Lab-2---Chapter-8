@@ -28,9 +28,3 @@ function taxCalculate(substotal) // calculating tax cost using arthimatic operat
 	return ((10 / 100) * substotal).toFixed(2);
 }
 
-var display = {
-	subtotal: substotal.toFixed(2),
-	tax: tax,
-	shipping: shipping,
-	grandTotal: grandTotal.toFixed(2)
-}

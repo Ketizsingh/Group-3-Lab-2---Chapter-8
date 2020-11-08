@@ -1,23 +1,30 @@
 /* add loop and other code here ... in this simple exercise we are not
    going to concern ourselves with minimizing globals, etc */
 
-   let substotal = 0;
-   
-   for (let index = 0; index < filenames.length; index++) {
+let substotal = 0;
 
-      const file = filenames[index];
-      const title = titles[index];
-      const quantity = quantities[index];
-      const price = prices[index];
-      const total = calculateTotal(quantity, price);
-   
-      document.write(outputCartRow(file, title, quantity, price.toFixed(2), total.toFixed(2)));
-   
-      substotal = substotal + total;
+for (let index = 0; index < filenames.length; index++) {
 
-      
-   }
+   const file = filenames[index];
+   const title = titles[index];
+   const quantity = quantities[index];
+   const price = prices[index];
+   const total = calculateTotal(quantity, price);
+
+   document.write(outputCartRow(file, title, quantity, price.toFixed(2), total.toFixed(2)));
+
+   substotal = substotal + total;
+
+
+}
 
 var shipping = shippingCalculate(substotal);
 var tax = taxCalculate(substotal);
 var grandTotal = totalCalculate(substotal, shipping, tax);
+
+var display = {
+   subtotal: substotal.toFixed(2),
+   tax: tax,
+   shipping: shipping,
+   grandTotal: grandTotal.toFixed(2)
+}
